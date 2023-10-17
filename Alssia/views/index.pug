@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  #container
+    div
+      img(src="/votre-logo.png", id="logo")
+
+      form(action="/login", method="post")
+        h2 Welcome to  Lokago ! 
+        label(for="email") 
+        input(type="text", id="email", name="email", placeholder="E-mail", required)
+        label(for="password") 
+        input(type="password", id="password", name="password", placeholder="Mot de passe", required)
+        
+        a(href="/forgot-password") Forgot Password
+        button(type="submit") Connexion
