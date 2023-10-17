@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 200vh;
+  height: 230vh;
   margin-top: 130px;
 }
 
@@ -123,19 +123,28 @@ nav ul {
   margin-left: 10px;
   margin-top: 5px;
   list-style-type: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 50px;
 }
 
 nav li {
-  display: flex;
+  display: block;
   list-style: none;
 }
 
 li a {
   font-weight: 300;
   font-size: 8;
-  width: max-content;
-  padding: 10px 40px 10px 0px;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  cursor: pointer;
 }
+
+li .menuLink {
+  margin-left: 40px;
+}
+
 
 /* UNDERLINE THE MENU */
 nav #marker{
@@ -152,19 +161,78 @@ nav #marker{
 
 /*First page ---- HOME*/
 .homeBack {
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
   background-image: url("../assets/backgroundHome.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -110px;
+  background-position-y: -240px;
 }
 
 .blockTitle {
-  width: 350px;
+  width: 320px;
   position: absolute;
-  height: 250px;
+  height: 220px;
   background-color: white;
   left: 10%;
   top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.blockContainer {
+  width: 85%;
+  height: 80%;
+  /*background-color:#00B7FF;*/
+  justify-content: space-between;
+}
+
+.blockTitle h1 {
+  letter-spacing: normal;
+  font-size: 28px;
+  padding: 0px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 37px;
+  margin-top: 5px;
+}
+
+.blockTitle button {
+  letter-spacing: normal;
+  font-size: 12px;
+  padding: 13px 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  width: 100%;
+  border-width: 0px;
+  background-color: #000000;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.blockContainer a {
+  font-size: 10px;
+  letter-spacing: normal;
+  color: #7dc2d8;
+  text-decoration: underline;
+  top: 200px;
+}
+
+.blockMenu {
+  background-color: #414141;
+}
+
+.menuLink {
+  width: fit-content;
+}
+
+.menuLink .blockMenu {
+  position: absolute;
+  margin-top: 0px;
+  width: auto;
 }
