@@ -1,8 +1,198 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  font: 15px 'LT Galaxy Reverse', sans-serif;
+  margin: 0px;
+  letter-spacing: 0.8px;
 }
 
-a {
-  color: #00B7FF;
+body {
+  /*color: #00B7FF;*/
+  height: 200vh;
+}
+
+
+/*==== HEADER ====*/
+header {
+  /*background-color: red;*/
+  width: 100vw;
+  height: 130px;
+  border-color: #00B7FF;
+  border-bottom: 1px solid #E4E4E4;
+  position: fixed
+}
+
+.headerInfos {
+  height: 53%;
+  border-bottom: 1px solid #E4E4E4;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerInfos .titleSite h1 {
+  font-size: 25px;
+}
+
+.headerInfos .searchInputContainer {
+  width: 40%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  padding-left: 20px;
+}
+
+.headerInfos .buttonSide {
+  /*background-color: red;*/
+  width: 40%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.searchInputContainer form {
+  width: 80%;
+  margin-left: 5px;
+}
+
+.inputSearch {
+  border-width: 0px;
+  width: 100%;
+  height: 30px;
+  outline: none;
+}
+
+.inputSearch::placeholder {
+  color: #414141;
+  font-size: 13px;
+}
+
+.buttonContainer {
+  /*background-color: red;*/
+  min-width: 60%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.rentButton {
+  background-color: black;
+  color: #fff;
+  border-width: 0px;
+  padding: 10px 14px;
+  border-radius: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  margin-right: 10px;
+  min-width: auto;
+  height: 80%;
+  font-weight: 500;
+}
+
+.accountButton {
+  border-width: 0px;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.buttonContainer button {
+  cursor: pointer;
+}
+
+/* SECOND PART OF THE MENU */
+
+nav {
+  height: 47%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: auto;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+nav li {
+  display: flex;
+  list-style: none;
+}
+
+li a {
+  font-weight: 300;
+  font-size: 8;
+  width: max-content;
+  padding: 10px 40px 10px 0px;
+}
+
+/* UNDERLINE THE MENU */
+nav #marker{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	background-color:#A9D6E5;
+	width: 0;
+	height: 2px;
+	transition: 0.2s; 
+  z-index: 9999;
+}
+
+ /*SOUS MENU*/
+
+.menuGeneral {
+  position: absolute;
+  width: 96%;
+  min-height: 300px;
+  top: 110px;
+  left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  display: none;
+  z-index: 888;
+}
+
+.menuPart {
+  min-width: 200px;
+  margin-right: 40px;
+  padding-top: 40px;
+}
+
+.menuLink:hover .menuGeneral {
+  z-index: 99;
+  display: flex;
+}
+
+.menuPart h1 {
+  color: #bc0202;
+  margin-bottom: 20px;
+}
+
+.menuPart a{
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+/*.menuGeneral {
+  display: block;
+  width: 96%;
+  margin-left: auto;
+  height: 300px;
+  top: 130px;
+  margin-right: auto;
+  border-bottom: 1px solid #E4E4E4;
+  z-index: 999;
+}*/
+
+.menu1:hover ~ .menuContainer{
+  background-color: #00B7FF;
 }
