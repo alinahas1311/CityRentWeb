@@ -5,19 +5,21 @@
 }
 
 body {
-  /*color: #00B7FF;*/
   height: 200vh;
+  margin-top: 130px;
 }
 
 
 /*==== HEADER ====*/
 header {
-  /*background-color: red;*/
+  background-color: white;
   width: 100vw;
   height: 130px;
   border-color: #00B7FF;
   border-bottom: 1px solid #E4E4E4;
-  position: fixed
+  position: fixed;
+  top: 0;
+  z-index: 999999;
 }
 
 .headerInfos {
@@ -138,7 +140,7 @@ li a {
 /* UNDERLINE THE MENU */
 nav #marker{
 	position: absolute;
-	bottom: 0px;
+	bottom: 5px;
 	left: 0;
 	background-color:#A9D6E5;
 	width: 0;
@@ -147,52 +149,22 @@ nav #marker{
   z-index: 9999;
 }
 
- /*SOUS MENU*/
 
-.menuGeneral {
+/*First page ---- HOME*/
+.homeBack {
+  height: 80vh;
+  width: 100vw;
+  background-image: url("../assets/backgroundHome.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -110px;
+}
+
+.blockTitle {
+  width: 350px;
   position: absolute;
-  width: 96%;
-  min-height: 300px;
-  top: 110px;
-  left: 0px;
-  display: flex;
-  justify-content: flex-start;
-  display: none;
-  z-index: 888;
-}
-
-.menuPart {
-  min-width: 200px;
-  margin-right: 40px;
-  padding-top: 40px;
-}
-
-.menuLink:hover .menuGeneral {
-  z-index: 99;
-  display: flex;
-}
-
-.menuPart h1 {
-  color: #bc0202;
-  margin-bottom: 20px;
-}
-
-.menuPart a{
-  color: #000000;
-  margin-bottom: 5px;
-}
-
-/*.menuGeneral {
-  display: block;
-  width: 96%;
-  margin-left: auto;
-  height: 300px;
-  top: 130px;
-  margin-right: auto;
-  border-bottom: 1px solid #E4E4E4;
-  z-index: 999;
-}*/
-
-.menu1:hover ~ .menuContainer{
-  background-color: #00B7FF;
+  height: 250px;
+  background-color: white;
+  left: 10%;
+  top: 40%;
 }
