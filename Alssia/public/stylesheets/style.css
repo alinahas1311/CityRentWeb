@@ -10,7 +10,9 @@ body {
 }
 
 
-/*==== HEADER ====*/
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= HEADER --- & --- MENU ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
 header {
   background-color: white;
   width: 100vw;
@@ -47,7 +49,6 @@ header {
 }
 
 .headerInfos .buttonSide {
-  /*background-color: red;*/
   width: 40%;
   height: 100%;
   justify-content: flex-end;
@@ -74,7 +75,6 @@ header {
 }
 
 .buttonContainer {
-  /*background-color: red;*/
   min-width: 60%;
   justify-content: space-between;
   display: flex;
@@ -107,7 +107,7 @@ header {
   cursor: pointer;
 }
 
-/* SECOND PART OF THE MENU */
+/* ============================= SECOND PART OF THE MENU ============================= */
 
 nav {
   height: 47%;
@@ -126,6 +126,7 @@ nav ul {
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 50px;
+  /*background-color: #00B7FF;*/
 }
 
 nav li {
@@ -156,10 +157,78 @@ nav #marker{
 	height: 2px;
 	transition: 0.2s; 
   z-index: 9999;
+  pointer-events: none;
+}
+
+/* ============================= THIRD & HIDDEN PART OF THE MENU ============================= */
+
+.blockMenu {
+  position: absolute;
+  width: 98vw;
+  height: auto;
+  left: 1%;
+  right: 1%;
+  margin: auto;
+  background-color: white;
+  border-bottom: 1px solid #E4E4E4;
+  display: none;
+}
+
+.submenu {
+  margin-top: 40px;
+  margin-left: 40px;
+  padding-right: 60px;
+  pointer-events: none;
+  padding-bottom: 100px;
+}
+
+.submenu h1 {
+  color: gray;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.submenu a {
+  cursor: pointer;
+  pointer-events: all;
+;}
+
+.submenu p {
+  color: black;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.submenu p:hover {
+  color: #00B7FF;
 }
 
 
-/*First page ---- HOME*/
+#womenMenu:hover ~ #blockMenu1 {
+  display: flex;
+}
+
+#menMenu:hover ~ #blockMenu2 {
+  display: flex;
+}
+
+#kidsMenu:hover ~ #blockMenu3 {
+  display: flex;
+}
+
+#aboutMenu:hover ~#blockMenu6 {
+  display: flex;
+}
+
+.blockMenu:hover {
+  display: flex;
+}
+
+/* ============================================================================= ==================== ============================================================================= */
+/* ============================================================================= First page ---- HOME ============================================================================= */
+/* ============================================================================= ==================== ============================================================================= */
+
 .homeBack {
   height: 70vh;
   width: 100vw;
@@ -185,7 +254,6 @@ nav #marker{
 .blockContainer {
   width: 85%;
   height: 80%;
-  /*background-color:#00B7FF;*/
   justify-content: space-between;
 }
 
@@ -221,18 +289,4 @@ nav #marker{
   color: #7dc2d8;
   text-decoration: underline;
   top: 200px;
-}
-
-.blockMenu {
-  background-color: #414141;
-}
-
-.menuLink {
-  width: fit-content;
-}
-
-.menuLink .blockMenu {
-  position: absolute;
-  margin-top: 0px;
-  width: auto;
 }
