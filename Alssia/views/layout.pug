@@ -4,107 +4,162 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/javascript.js')
+
+    //-     ====      CONFIGURATION DE BOOTSTRAP
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    //-     ====
   body
-    header
-      .headerInfos
-        .searchInputContainer
-          svg(xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48")
-            path(d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z")
-          form
-            input(type="text" id="fname" name="fname" placeholder="Search by brand, item..." color="#292929").inputSearch
-        .titleSite 
-          h1 LOKAGO
-          
-        .buttonSide 
-          .buttonContainer
-            button.rentButton Rent your item
-            button.accountButton Log in
-            button.accountButton Sign up
-            img(src="/assets/blackLogo.png" width="25px")
+    .headerMenuRegroupment
+      header
+        .headerInfos
 
-      nav#menu
-        div#marker
-        ul
-          li.navbar__items
-            a#womenMenu Women
-            #blockMenu1.blockMenu
-              .submenu
-                a 
-                  h1 Dress
-                a
-                  p Satin dress
-                a
-                  p Ball gown
-                a
-                  p Cocktail dress
-                a
-                  p Fit and flare dress
-                a
-                  p High-low dress
-                a
-                  p Wedding dress
+          .searchInputContainer
+            svg(xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48")
+              path(d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z")
+            form
+              input(type="text" id="fname" name="fname" placeholder="Search by brand, item..." color="#292929").inputSearch
+          .titleSite 
+            p.h3.mt-2 LOKAGO
+            
+          .buttonSide 
+            .buttonContainer
+              button.rentButton Rent your item
+              button.accountButton Log in
+              button.accountButton Sign up
+              img(src="/assets/blackLogo.png" width="25px")
 
-              .submenu
-                a 
-                  h1 Pantsuit
-                a
-                  p Evening
-                a
-                  p Corduroy 
-                a
-                  p Silk
-                a
-                  p Jacquard patterned
+          #openMenuBar
+            span#menuBar1
+            span#menuBar2.mt-1
+            span#menuBar3.mt-1
 
-              .submenu
-                a 
-                  h1 Top
-                a
-                  p Sequin
-                a
-                  p Velvet 
-                a
-                  p Backless
-                a
-                  p Satin bustier 
-                a
-                  p Glistening pearl corset 
 
-              .submenu
-                a 
-                  h1 Shoes
-                a
-                  p High-heeled pumps
-                a
-                  p Satin stilettos 
-                a
-                  p Stylish heeled booties
-                a
-                  p Velvet heels 
-                a
-                  p Metallic stilettos
-                a
-                  p Animal print pumps
+        nav#menu
+            div#marker
+            ul.mt-3
+              li.navbar__items
+                a#womenMenu Women
+                #blockMenu1.blockMenu
+                  .submenu
+                    a 
+                      h1 Dress
+                    a
+                      p Satin dress
+                    a
+                      p Ball gown
+                    a
+                      p Cocktail dress
+                    a
+                      p Fit and flare dress
+                    a
+                      p High-low dress
+                    a
+                      p Wedding dress
 
-          li.navbar__items
-            a.menuLink#menMenu Men
-            #blockMenu2.blockMenu
+                  .submenu
+                    a 
+                      h1 Pantsuit
+                    a
+                      p Evening
+                    a
+                      p Corduroy 
+                    a
+                      p Silk
+                    a
+                      p Jacquard patterned
 
-          li.navbar__items
-            a.menuLink#kidsMenu Kids
-            #blockMenu3.blockMenu
+                  .submenu
+                    a 
+                      h1 Top
+                    a
+                      p Sequin
+                    a
+                      p Velvet 
+                    a
+                      p Backless
+                    a
+                      p Satin bustier 
+                    a
+                      p Glistening pearl corset 
 
-          li.navbar__items
-            a.menuLink Event
+                  .submenu
+                    a 
+                      h1 Shoes
+                    a
+                      p High-heeled pumps
+                    a
+                      p Satin stilettos 
+                    a
+                      p Stylish heeled booties
+                    a
+                      p Velvet heels 
+                    a
+                      p Metallic stilettos
+                    a
+                      p Animal print pumps
 
-          li.navbar__items
-            a.menuLink Last minute
+              li.navbar__items
+                a.menuLink#menMenu Men
+                #blockMenu2.blockMenu
 
-          li.navbar__items
-            a.menuLink#aboutMenu About
-            #blockMenu6.blockMenu
+              li.navbar__items
+                a.menuLink#kidsMenu Kids
+                #blockMenu3.blockMenu
 
-        .menuContainer
+              li.navbar__items
+                a.menuLink Event
+
+              li.navbar__items
+                a.menuLink Last minute
+
+              li.navbar__items
+                a.menuLink#aboutMenu About
+                #blockMenu6.blockMenu
+        nav#menuPhone
+            .buttonContainer 
+              a.accountButton.loginButton.text-center Rent your clothes
+              a.accountButton.signinButton.text-center Sign up | Log in
+              a.helpButton Need help ?
+
+
+            .categorieContainer 
+              h6 Categories
+              a.categorieName
+                p Women
+
+              a.categorieName
+                p Men
+
+              a.categorieName
+                p Kids
+
+              a.categorieName
+                p Events
+
+              a.categorieName
+                p Last minute
+
+              
+            .categorieContainer 
+              h6 Discover
+              a.categorieName
+                p About us
+
+              a.categorieName
+                p How does it works
+
+              a.categorieName
+                p Privacy Policy
+
+              a.categorieName
+                p Terms & conditions
+
+              a.categorieName
+                p Contact us
+
+
+      
           
             
 

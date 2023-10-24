@@ -39,4 +39,42 @@ document.addEventListener('DOMContentLoaded', function() {  //To begin after the
     })
 
 
+
+    var menuPhone = document.querySelector('#openMenuBar');                  //Get All menu options
+    var menuBar1 = document.querySelector('#menuBar1');                  //Get All menu options
+    var menuBar2 = document.querySelector('#menuBar2');                  //Get All menu options
+    var menuBar3 = document.querySelector('#menuBar3');                  //Get All menu options
+    var navMenu = document.querySelector('nav#menuPhone');                  //Get All menu options
+
+
+    menuPhone.addEventListener("click", () => {	                 //For each, we detect when the mouse go over it     // e represents the one who is hover !!
+        if (menuBar2.style.visibility === "hidden"){
+            menuBar2.style.visibility = "visible";
+            //return to default menuBar2
+            menuBar1.style.transform = "rotate(0deg)";
+            menuBar1.style.marginTop = "0px";
+            //return to default menuBar3
+            menuBar3.style.transform = "rotate(0deg)";
+            menuBar3.style.marginTop = "0px";
+
+            //for all the nav
+            navMenu.style.display = "none"
+        } else {
+            menuBar2.style.visibility = "hidden";
+            //menuBar1
+            menuBar1.style.transform = "rotate(45deg)";
+            menuBar1.style.marginTop = "10px";
+            menuBar1.style.transition = ".2s";
+            //menuBar3
+            menuBar3.style.transform = "rotate(-45deg) translateX(8px) translateY(-8px)";
+            menuBar3.style.marginTop = ".2s";
+
+            //for all the nav
+            navMenu.style.display = "block"
+        }
+
+    })
+    
+
+
 })

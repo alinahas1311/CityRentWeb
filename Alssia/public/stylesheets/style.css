@@ -1,3 +1,12 @@
+
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= COMPUTER ----- DESIGN ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+
 * {
   font: 15px 'LT Galaxy Reverse', sans-serif;
   margin: 0px;
@@ -32,6 +41,11 @@ header {
   align-content: center;
   display: flex;
   justify-content: space-around;
+}
+
+/* LITTLE MENU */
+.openMenuBar {
+  display: none;
 }
 
 .headerInfos .titleSite h1 {
@@ -115,6 +129,10 @@ nav {
   align-items: center;
 }
 
+#menuPhone, #menuPhone *{
+  display: none;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -126,7 +144,6 @@ nav ul {
   padding-left: 5px;
   padding-right: 5px;
   margin-left: 50px;
-  /*background-color: #00B7FF;*/
 }
 
 nav li {
@@ -144,6 +161,8 @@ li a {
 
 li .menuLink {
   margin-left: 40px;
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -231,11 +250,11 @@ nav #marker{
 
 .homeBack {
   height: 70vh;
-  width: 100vw;
+  min-width: 100vw;
   background-image: url("../assets/backgroundHome.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -240px;
+  background-size:100%;
+  background-position-y: -230px;
 }
 
 .blockTitle {
@@ -289,4 +308,172 @@ nav #marker{
   color: #7dc2d8;
   text-decoration: underline;
   top: 200px;
+}
+
+
+
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= TABLET & PHONE DESIGN ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+
+
+@media only screen and (max-width: 1060px) {
+  body {
+    height: 230vh;
+    margin-top: 68;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* ============================================================================= ===================== ============================================================================= */
+  /* ============================================================================= HEADER --- & --- MENU ============================================================================= */
+  /* ============================================================================= ===================== ============================================================================= */
+
+  header {
+    height: 68px;
+    border: none;
+    /*background-color: red;*/
+  }
+
+  header .headerInfos {
+    height: 100%;
+  }
+
+  nav #menu {
+    display: none;
+  }
+
+
+  .homeBack {
+    min-width: 100vw;
+    background-image: url("../assets/backgroundHome.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 100px;
+  }
+
+
+  .headerInfos .searchInputContainer {
+    display: none;
+  }
+
+  .headerInfos .buttonSide{
+    display: none;
+  }
+
+  #openMenuBar {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #414141;
+  }
+
+  nav#menu {
+    display: none;
+  }
+
+  nav#menuPhone{
+    width: 100vw;
+    display: none;
+    min-height: 100vh; /* Ajustez cette valeur selon vos besoins */
+    overflow-y: auto;
+    padding-bottom: 200px;
+  }
+
+  nav#menuPhone *{
+    display: block;
+  }
+
+  .buttonContainer {
+    padding: 15px 0 25px 0;
+    border-bottom: 1px solid #E4E4E4;
+    /*background-color: #00B7FF;*/
+  }
+
+  .accountButton {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .loginButton {
+    background-color: #000000;
+    color: #fff;
+  }
+
+  nav a.signinButton {
+    border-width: 1px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+  }
+
+  .helpButton {
+    color: #248ab2;
+    cursor: pointer;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+  }
+
+  /* SECOND PART OF THE PHONE MENU  */
+
+  .categorieContainer {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .categorieContainer h6 {
+    margin-left: 20px;
+    color: #747474;
+    font-size: 15px;
+    letter-spacing: normal;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  .categorieName {
+    border-bottom: 1px solid #E4E4E4;
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-align: right; /* Aligner le texte à droite */
+  }
+
+  .categorieName p {
+    height: 100%;
+    width: fit-content;
+    padding: 20px 0 5px 20px;
+    margin-left: 20px;
+  }
+
+  .categorieName p::after{
+    content: ">";
+    color: #000000;
+    position: absolute;
+    right: 35px; /* Aligner l'élément tout à droite */
+    z-index: 2000;
+  }
 }
