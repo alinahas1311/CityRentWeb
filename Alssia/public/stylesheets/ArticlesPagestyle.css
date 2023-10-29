@@ -1,0 +1,172 @@
+
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= COMPUTER ----- DESIGN ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+
+body {
+    height: 230vh;
+    margin-top: 130px;
+}
+
+
+
+/*First top of the page - w/ title*/
+.secondaryHeader {
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    display: block;
+}
+
+#pathCategorie{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-top: 30px
+}
+
+#mainCategorie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;   
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+/*All articles container*/
+.articlesContainer {
+    background-color: #F5F6F8;
+    height: auto;
+    display: flex;
+    padding: 40px 60px;
+}
+
+/*filterContainer*/
+.filterContainer {
+    height: auto;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.filterContainer p{
+    color: gray;
+    width: 80%;
+}
+
+/*articlesRenderContainer*/
+.articlesRenderContainer {
+    height: 100%;
+    width: 75%;
+}
+
+details {
+    width: 60%;
+    transition-delay: 2s;
+    margin-top: 30px;
+
+}
+
+details[open] .categoriesContainer {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d1d1d1;
+    width: auto;
+    display: block;
+
+    /*align-items: center;*/
+}
+
+.subCategorieName {
+    margin-top: 10px;
+    width: 100%;
+}
+  
+details[open] summary {
+    margin-bottom: 15px;
+}
+
+summary {
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 150ms ease-out;
+    font-weight: bold;
+    
+  }
+
+summary::before {
+    content: "";
+    margin-right: 15px;
+
+}
+
+summary[open] {
+    border-bottom: 1px solid #dc6060;
+}
+
+label {
+    margin-left: 40px;
+    letter-spacing: normal;
+    text-transform: capitalize;
+}
+
+label.noTouchableLabel::before {
+    outline: none;
+}
+
+.noTouchable {
+    outline: none;
+    pointer-events: none
+}
+
+input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/*For the button just before*/
+
+label::before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    background-color: #797979;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 4px;
+
+    transform: scale(0);
+    transition: all 1ms ease-in;
+}
+
+/*For the bakcground of the button just before*/
+label::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+
+    border : 1.4px solid #c2c2c2;
+    position: absolute;
+    margin-left: -31.5px;
+    margin-top: -15px;
+}
+
+input[type='checkbox']:checked + label::before {
+    transform: scale(1);
+}
+
+#subCategoriesContainer {
+    
+}

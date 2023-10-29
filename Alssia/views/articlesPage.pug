@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  head 
+    link(rel='stylesheet', href='/stylesheets/ArticlesPagestyle.css')
+    script(src='/javascripts/articlesPage.js')
+  body
+    .secondaryHeader
+      p#pathCategorie Home #{department ? ' > ' + department : ''} #{categorie ? ' > ' + categorie : ''}
+      h1#mainCategorie #{categorie ? categorie : department}
+
+    .articlesContainer
+      .filterContainer
+        p 100 000 results
+
+        details(open)
+          summary Department #{department ? '(1)' : ''}
+          .categoriesContainer.noTouchable
+            input(type="checkbox" id="departement" checked class="noTouchable")
+            label(for="departement" class="noTouchableLabel")#department
+            
+        details(open)
+          summary#categoryTitleContainer
+          .categoriesContainer.noTouchable
+            input(type="checkbox" id="categorie" checked class="noTouchable")
+            label(for="categorie" class="noTouchableLabel")#categorieTag
+        
+      
+        details(open)
+          summary Subcategory #{subcategorie ? '(1)' : ''}
+          .categoriesContainer#subCategoriesContainer
+
+      .articlesRenderContainer
+
+    
