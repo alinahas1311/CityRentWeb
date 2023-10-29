@@ -167,6 +167,76 @@ input[type='checkbox']:checked + label::before {
     transform: scale(1);
 }
 
-#subCategoriesContainer {
-    
+#colorContainer {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left:-20px;
+}
+
+.bubbleColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.bubbleColor#white {
+    background-color: white;
+}
+
+.bubbleColor#black {
+    background-color: black;
+}
+
+.bubbleColor#yellow {
+    background-color: #FAEB67;
+}
+
+.bubbleColor#brown {
+    background-color: #A57738;
+}
+
+.bubbleColor#green {
+    background-color: green;
+}
+
+.bubbleColor#beige {
+    background-color: #DFC4A3;
+}
+
+.bubbleColor#orange {
+    background-color: #FFB449;
+}
+
+.bubbleColor#darkgreen {
+    background-color: #89B379;
+}
+
+.bubbleColor#blue {
+    background-color: #325B8C;
+}
+
+.bubbleColor#purple {
+    background-color: #BF55BD;
+}
+
+
+.bubbleColor#ligthblue {
+    background-color: #8DE4DC;
+}
+
+.bubbleColor#grey {
+    background-color: #C5C5C5;
+}
+
+.bubbleColor#pink {
+    background-color: #FDBFD7;
+}
+
+.bubbleColor#gold {
+    background-color: #D3B360;
+}
+
+.redBorder {
+    border: 1px solid red;
 }

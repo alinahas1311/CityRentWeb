@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 /* GET artcles page. */
 router.get('/article/:department?', function(req, res, next) {
   const department = req.params.department;
+  console.log(department)
 
 
   res.render('articlesPage', { title: 'Lukago Articles', department: department});

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {  //To begin after the load of all the DOM
 
-
     // Récupération du lien complet de la page pour en extraire des données
     let urlParams = window.location.href;
     //let categories = urlParams.get('categorie');
@@ -10,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {  //To begin after the
     const parameters = urlDivided[urlDivided.length-1].split("_")
     //console.log("Paramètre 1:", parameters);
 
+    //on récupère la catégorie sélectionné s'il y a : 
     let subcategoriesSelected = []
-    console.log("--", parameters[1].slice(10))
     for (let j = 2; j < parameters.length; j++) {
         if (parameters[j].includes("subcategory")){
             subcategoriesSelected.push(parameters[j].toLowerCase().slice(12))
@@ -87,15 +86,30 @@ document.addEventListener('DOMContentLoaded', function() {  //To begin after the
         input.id = subCategories[i];
         const label = document.createElement("label");
         label.setAttribute("for", subCategories[i]);
-        label.textContent = subCategories[i]
+        label.textContent = subCategories[i];
         label.classList.add("subCategorieName");
 
-        subCategoriesContainer.appendChild(input)
-        subCategoriesContainer.appendChild(label)
+        subCategoriesContainer.appendChild(input);
+        subCategoriesContainer.appendChild(label);
     }
 
 
-    //on récupère la catégorie sélectionné s'il y a : 
+    const bubbleColor = document.getElementsByClassName("bubbleColor")
+    console.log(bubbleColor);
+
+    // Parcourir la collection pour ajouter un gestionnaire d'événements à chaque élément
+    for (let i = 0; i < bubbleColor.length; i++) {
+        bubbleColor[i].addEventListener("click", function(){
+            console.log("Hello World!", this.id);
+            this.classList.toggle("redBorder");
+
+            let searchLink = urlParams+`_color=${this.id}`;
+            console.log(searchLink)
+            window.location.href = searchLink
+        });
+    }
+
+
 
     
 
