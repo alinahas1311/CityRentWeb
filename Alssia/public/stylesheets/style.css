@@ -1,31 +1,40 @@
 
-/* styles.css */
-body{
-  width: auto;
-}
+/* styles.css pour le form de log in */
+
 
 #container {
-  width: 30%;
+  max-width: 500px;
   margin: auto;
-  padding: 2%;
+  padding: 4%;
   border-radius: 2%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  
+  display: flex;
+  margin-top: 5%;
+
+}
+
+
+#ih{
+  display: flex;
 }
 
 #logo {
-  display: block;
-  margin-left: 90%;
+  width: 20%;
+  margin-left: 36%;
+  margin-top: -5% ;
 }
 
-form {
-  text-align: center;
-}
 
 h2 {
   color: #000000;
-  margin-right: 48%;
+  margin-top:0%;
+  font-size:x-large;
 
+}
+
+h{
+  color: #3e3e3e;
+  margin-right: 65%;
 }
 
 label {
@@ -40,6 +49,7 @@ input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  outline: none; 
 }
 
 button {
@@ -51,6 +61,14 @@ button {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+
+}
+
+.forgetButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -59,12 +77,130 @@ a {
   color: #141414;
   text-decoration: none;
   margin: 3%;
-  width: auto;
+  width: fit-content;
   font-size: small;
-
+  
 }
 
 a:hover {
   text-decoration: underline;
 }
+
+.or p {
+  margin: 6%;
+  font-size: 18px;
+  color: #555;
+}
+
+.trait{
+  background-color: #3e3e3e;
+  height: 1px;
+  color :white;
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.or{
+  display: flex;
+  align-items: center;
+  margin: 4%;
+  margin-left:5%
+
+}
+
+.or-text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.signup-link a{
+  text-align: center;
+  font-size: 20px;
+  color: #555;
+  margin: auto;
+  padding: auto;
+
+}
+
+
+/* CROIX POUR FERMER */
+
+.close-icon{
+
+  font-size: 24px; /* Ajustez la taille selon vos besoins */
+  color: gray; /* Couleur de la croix */
+  cursor: pointer; /* Curseur au survol */
+  margin-left: 100%;
+  margin-top: -5%;
+  padding-bottom: 10%;
+  
+
+
+}
+
+
+/* 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""ADDAPTER LE LOGIN POUR UN ÉCRAN """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+*/
+
+@media only screen and (max-width: 1060px) {
+
+  #container{
+    box-shadow: none;
+
+  }
+}
+@media only screen and (max-width: 560px) {
+
+  #logo{
+    width: 15%;
+    height: 10%;
+    margin-left: 33%;
+    margin-top:-3%;
+
+    
+  }
+
+  #container{
+    margin-top: 10%;
+    padding-top: 20%;
+    margin-left: 2%;
+  }
+
+  h2 {
+    color: #000000;
+    
+    font-size:large;
+  }
+
+  h{
+    font-size: small;
+  }
+
+  .close-icon{
+
+    margin-left: 90%;
+    padding-bottom: 20%;  
+  }
+}
+
+
+
+
+
+
+
+
+
+
 

@@ -4,14 +4,30 @@ block content
 
   #container
     div
-      img(src="/votre-logo.png", id="logo")
+      
 
       form(action="/login", method="post")
-        h2 Welcome to  Lokago ! 
+
+        .close-icon(onclick="closeLoginForm()") ×
+        
+        #ih
+          h2 Welcome to  Lokago ! 
+          img(src="/assets/logo.png", id="logo")
+          
+        h Log in to start renting
         label(for="email") 
         input(type="text", id="email", name="email", placeholder="E-mail", required)
         label(for="password") 
         input(type="password", id="password", name="password", placeholder="Mot de passe", required)
         
-        a(href="/forgot-password") Forgot Password
-        button(type="submit") Connexion
+        .forgetButtonContainer 
+          a(href="/forgot-password") Forgot Password
+        
+        button(type="submit") Log in
+        .or
+          .trait  
+          p or
+          .trait 
+
+        .signup-link
+          a(href="/signup") Not a member ? Sign up now 
