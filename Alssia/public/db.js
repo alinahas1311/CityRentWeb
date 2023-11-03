@@ -1,22 +1,18 @@
-//connecter la base de donnée
-
+// db.js
 const mysql = require('mysql2');
-
-port_cyril = 3306
-port_ali = 3307
 
 //////////////////// CONNECT TO DB + PARAMETERS
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'Lokago',
-    port: port_ali
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'Lokago',
+  port: 3306
 });
 
 db.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to database');
+  if (err) throw err;
+  console.log('Connected to database');
 });
 
 module.exports = db;

@@ -1,36 +1,58 @@
-extends layout
+
 
 
 
 block content
 
-  #container
-    div
-      
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/connexion.css')
+  body
 
-      form(action="/users/connect", method="post")
-
-        .close-icon(onclick="closeLoginForm()") ×
+    #containerConnexion
+      div
         
-        #ih
-          h2 Welcome to  Lokago ! 
-          img(src="/assets/logo.png", id="logo")
+
+        form(action="/users/connect", method="post")
+
+          .close-icon(onclick="closeLoginForm()") ×
           
-        h Log in to start renting
-        label(for="mail") 
-        input(type="text", id="mail", name="mail", placeholder="E-mail", required)
-        label(for="password") 
-        input(type="password", id="password", name="password", placeholder="Mot de passe", required)
-        p(id="password-error" class="error-message #{passwordError ? 'visible' : ''}")= passwordError
+          #ih
+            h2 Welcome to  Lokago ! 
+            img(src="/assets/logo.png", id="logo")
+            
+          h Log in to start renting
+          label(for="mail") 
+          input(type="text", id="mail", name="mail", placeholder="E-mail", required)
+          label(for="password") 
+          input(type="password", id="password", name="password", placeholder="Mot de passe", required)
+          p(id="password-error" class="error-message #{passwordError ? 'visible' : ''}")= passwordError
 
-        .forgetButtonContainer 
-          a(href="/forgot-password") Forgot Password
-        
-        button(type="submit") Log in
-        .or
-          .trait  
-          p or
-          .trait 
+          .forgetButtonContainer 
+            a(href="/forgot-password") Forgot Password
+          
+          button(type="submit") Log in
+          .or
+            .trait  
+            p or
+            .trait 
 
-        .signup-link
-          a(href="/users/signup") Not a member ? Sign up now 
+          .signup-link
+            a(href="/users/signup") Not a member ? Sign up now 
+
+
+  
+  script.
+    function closeLoginForm() {
+      window.location.href = 'http://localhost:3000/'
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const passwordErrorElement = document.getElementById('password-error');
+
+        // Masquer le message d'erreur lorsque le formulaire est soumis
+        document.querySelector('form').addEventListener('submit', () => {
+          passwordErrorElement.classList.remove('visible');
+        });
+    });
+          

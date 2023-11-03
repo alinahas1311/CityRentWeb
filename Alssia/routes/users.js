@@ -1,18 +1,20 @@
-
-
 var express = require('express');
 var router = express.Router();
 
-
-
 const db = require('../public/db');
 
-const bcrypt = require('bcrypt');
 
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= LOGIN ------ REGISTER ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+
+// PARAMETERS FOR ENCRYPTION
+const bcrypt = require('bcrypt');
 const saltRounds = 10; 
 
-
-//Route
+//routes 
 /* GET log in. */
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'login' });
@@ -24,19 +26,7 @@ router.get('/signup', function(req, res, next) {
 });
 
 
-// Ajout de la route pour '/add' un contact sans encrypter le mdp
-// router.post('/add', async (req, res) => {
-//   const { name, mail, phone, password } = req.body;
-//   db.query(`INSERT INTO clients (name, mail, phone, password) VALUES (?, ?, ?, ?)`, [name, mail, phone, password]),(err, results) => {
-//       if (err) console.log(err);
-//     }
-//     res.redirect('login')
-//  });
-
-
-
-// Route pour ajouter un utilisateur avec le mdp haché
-// Route pour ajouter un utilisateur avec vérification de l'existence de l'adresse e-mail
+// REGISTRATION + ENCRYPTION
 router.post('/add', async (req, res) => {
   const { name, mail, phone, password } = req.body;
 
@@ -68,7 +58,6 @@ router.post('/add', async (req, res) => {
             res.status(500).send('Erreur lors de l\'insertion de l\'utilisateur dans la base de données');
             return;
           }
-          
           // Rediriger vers la page de connexion
           res.redirect('login');
         }
@@ -78,7 +67,7 @@ router.post('/add', async (req, res) => {
 });
 
 
-// Route pour gérer la connexion de l'utilisateur
+// CONNEXION + DECRYPTION - COMPARATION
 router.post('/connect', async (req, res) => {
   const { mail, password } = req.body;
 
@@ -110,7 +99,7 @@ router.post('/connect', async (req, res) => {
           // Si la comparaison renvoie true, l'utilisateur est authentifié
           if (isPasswordValid) {
             // Rediriger vers la page d'accueil ou la page de profil de l'utilisateur authentifié
-            res.redirect('/home'); // Remplacez '/home' par la page souhaitée
+            res.redirect('/');
           } else {
             // Si la comparaison renvoie false, le mot de passe est incorrect, renvoyer un message d'erreur
             const errorMessage = 'Mot de passe incorrect';
@@ -119,5 +108,14 @@ router.post('/connect', async (req, res) => {
       });
     });
 });
- 
+
+
+
+
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
+
 module.exports = router;
