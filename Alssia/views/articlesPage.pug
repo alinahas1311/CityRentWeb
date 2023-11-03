@@ -11,7 +11,7 @@ block content
 
     .articlesContainer
       .filterContainer
-        p 100 000 results
+        p#numberResults 0 results
 
         details(open)
           summary Department #{department ? '(1)' : ''}
@@ -52,6 +52,5 @@ block content
             li.bubbleColor#darkgreen
             li.bubbleColor#black
 
-      .articlesRenderContainer
-
-    
+      #articlesRenderContainer
+        

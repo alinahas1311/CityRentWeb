@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {  //To begin after the
 
 
 
-    var menuPhone = document.querySelector('#openMenuBar');                  //Get All menu options
-    var menuBar1 = document.querySelector('#menuBar1');                  //Get All menu options
-    var menuBar2 = document.querySelector('#menuBar2');                  //Get All menu options
-    var menuBar3 = document.querySelector('#menuBar3');                  //Get All menu options
-    var navMenu = document.querySelector('nav#menuPhone');                  //Get All menu options
+    const menuPhone = document.querySelector('#openMenuBar');                  //Get All menu options
+    const menuBar1 = document.querySelector('#menuBar1');
+    const menuBar2 = document.querySelector('#menuBar2');
+    const menuBar3 = document.querySelector('#menuBar3'); 
+    const navMenu = document.querySelector('nav#menuPhone')
 
 
     menuPhone.addEventListener("click", () => {	                 //For each, we detect when the mouse go over it     // e represents the one who is hover !!
