@@ -9,6 +9,15 @@ html
         const form = document.getElementById("container")
         form.style.display = 'none';
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const passwordErrorElement = document.getElementById('password-error');
+
+            // Masquer le message d'erreur lorsque le formulaire est soumis
+            document.querySelector('form').addEventListener('submit', () => {
+            passwordErrorElement.classList.remove('visible');
+            });
+          });
     
   body
     block content
