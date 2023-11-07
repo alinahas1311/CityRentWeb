@@ -365,3 +365,138 @@ p.originalPrice {
 .locationContainer p {
     margin-left: 5px;
 }
+
+
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ALI ----- ARTICLE CSS ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+/* ============================================================================= ===================== ============================================================================= */
+
+#body1{
+    text-transform: capitalize;
+}
+
+.productContainer{
+    display: flex;
+    margin-bottom: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -3%;
+}
+
+.productHeaderInfos {
+    position: absolute;
+    margin-top: 50px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+
+
+.productImage{
+    background-color: orange;
+    width: 60%;
+    position: sticky;
+    top: 0;
+    height: 80vh;
+    margin-top: 8.5%;
+    
+}
+
+.productDetails{
+    margin-top: 50px;
+    padding: 10%;
+    padding-left: 5%;
+    padding-top: 5%;
+    width: 50%;
+    
+}
+
+#productName{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.productDetails #button1 {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2%;
+    width: 97%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 13%;
+    margin-bottom: 3%;
+
+   
+}
+
+.productDetails #button2 {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2%;
+    width: 97%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 5%;
+    border:1px solid #000;
+   
+   
+}
+
+.details, .comments{
+    margin-top: 5%;
+    
+}
+
+.details h4{
+    font-size: 300%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.details details{
+    background-color: #f2f2f26a;
+    padding: 3%;
+    width: 90%;
+    
+}
+
+#OriginalPriceContainer{
+    display: flex;
+}
+
+#priceoriginal{
+    color: rgb(179, 8, 8);
+    text-decoration:line-through;
+    margin-left: 5px;  
+}
+
+#locContainer{
+    display: flex;
+    text-transform: capitalize;
+}
+
+#locContainer img {
+    margin-right: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+

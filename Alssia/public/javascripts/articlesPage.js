@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {  //To begin after the
         ];
     } else if (department === "kids" && parameters[1].slice(10) === "girls"){
         subCategories = [
+            "Dresses",
             "Skirts",
             "Blouses",
             "Shoes"
@@ -246,7 +247,6 @@ const recreateUrl = async (department, category, subcategories, colors) => {
 
 
 const getData = async (department, category, subcategories, colors) => {
-    console.log("SELECT * FROM articles WHERE department = '" + department + "' and category = " + category)
     sqlQuery = "SELECT * FROM articles WHERE department = '" + department + "' and category = '" + category + "'"
 
 
@@ -321,9 +321,7 @@ function renderItems(data){
         const pHeaderArticle = document.createElement("p");
         pHeaderArticle.classList.add("pHeaderArticle");
 
-        headerArticleItem.appendChild(pHeaderArticle)
-
-        articleGridItemDiv.appendChild(headerArticleItem)
+   
 
         //image
         const imageArticle = document.createElement("div");
@@ -344,7 +342,7 @@ function renderItems(data){
         pNameArticle.appendChild(nametext)
 
         const pTailleArticle = document.createElement("p");
-        var tailleText = document.createTextNode("tailleee mannequinnn");
+        var tailleText = document.createTextNode("Size : ");
         pTailleArticle.appendChild(tailleText)
 
         infoArticle.appendChild(h6InfoArticle)

@@ -9,44 +9,42 @@ block content
   
   body
 
-    #containerConnexion
-      div
+  #cont
+      #containerConnexion
         
-
-        form(action="/users/add", method="post")
-
-          .close-icon(onclick="closeLoginForm()") ×
+        div
           
-          #ih
-            h2 Welcome to  Lokago ! 
-            img(src="/assets/logo.png", id="logo")
+
+          form(action="/users/add", method="post" class="formSignup")
+
+            .close-icon(onclick="closeLoginForm()") ×
             
-          h Sign Up to start renting
+            #ih
+              h2 Welcome to  Lokago ! 
+              img(src="/assets/logo.png", id="logo")
+              
+            h Sign Up to start renting
 
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your Name" required>
-        
-          <label for="email">E-mail</label>
-          <input type="text" id="mail" name="mail" placeholder="Enter your E-mail" required>
-
-          <label for="password">Password </label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-          <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
-
-          p(id="signup-error" class="error-message #{signupError ? 'visible' : ''}")= signupError
-
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
           
-          #button-SignUp
-            button(type="submit") Sign Up 
-            .or
-              .trait  
-              p or
-              .trait 
+            <label for="email">E-mail</label>
+            <input type="text" id="mail" name="mail" placeholder="Enter your E-mail" required>
 
-          .signup-link
-            a(href="/users/login") You are member ? Log in
+            <label for="password">Password </label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            p(id="signup-error" class="error-message #{signupError ? 'visible' : ''}")= signupError
+
+            
+            #button-SignUp
+              button(type="submit") Sign Up 
+
+            .signup-link
+              a(href="/users/login") You are member ? Log in
 
 
   script.
