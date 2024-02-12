@@ -1,0 +1,102 @@
+
+extends layout
+
+block content
+  head 
+  body
+
+    section.slidhead
+        main
+            ul.slider
+                li.item(style="background-image: url('assets/bulgarie.jpeg'); background-size: cover;")
+                    .content
+                        h2.title Lossless Youths
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+                li.item(style="background-image: url('assets/maybach.png'); background-size: cover;")
+                    .content
+                        h2.title Estrange Bond
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+                li.item(style="background-image: url('assets/palace.png'); background-size: cover;")
+                    .content
+                        h2.title The Gate Keeper
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+                li.item(style="background-image: url('assets/jetviano.png'); background-size: cover;")
+                    .content
+                        h2.title Last Trace Of Us
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+                li.item(style="background-image: url('https://theawesomer.com/photos/2017/07/simon_stalenhag_the_electric_state_6.jpg'); background-size: cover;")
+                    .content
+                        h2.title Urban Decay
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+                li.item(style="background-image: url('https://da.se/app/uploads/2015/09/simon-december1994.jpg'); background-size: cover;")
+                    .content
+                        h2.title The Migration
+                        p.description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        button Read More
+            nav.nav
+                ion-icon.btn.prev(name="arrow-back-outline")
+                ion-icon.btn.next(name="arrow-forward-outline")
+
+    //- style='margin-top: -10%; margin-bottom: -25%;'
+    section.d-flex.align-items-center.position-relative.mt-5
+        .container
+          .row.justify-content-center
+            .col-12.col-md-10.col-lg-8.text-center
+              img(src='assets/logris.png', alt='Company Logo', width='100', height='100')(style="margin-bottom:2%; ")
+              p(style="font-family:'Times New Roman', Times, serif;margin-bottom: 7%;").welcome CITY RENT 
+              h1(style="font-family:Arial, Helvetica, sans-serif") Discover our Luxury services
+              hr(style='background-color: black; height: 1px; width : 4% ;border: none; margin:auto;padding:auto; margin-top:3%')
+              p.lead.mt-4.mb-5(style='font-size: 13px;')
+                | City Rent redefines the art of travel with our opulent car rental and chauffeur services. Based in the heart of Paris, we extend our exceptional offerings across Europe, ensuring every road leads to luxury. 
+                span#moreText.d-none
+                  | Our fleet, featuring only high-end vehicles, is matched by our exquisite concierge services within the finest palaces and hotels. We do more than transport; we transform your journey into a statement of prestige. 
+                a#seeMore(href='javascript:void(0);') See More
+
+
+
+
+
+  
+    .container-lg.px-md-5.d-flex.justify-content-center
+        .mt-5.px-3.px-lg-3.sect
+            .d-md-flex.pb-5.flex-row-reverse
+                .col-md-7.image-section
+                    img(src="assets/chauf.png", alt="Vue de l'hôtel").img-fluid
+                .col-md-5.text-section.mt-md-0.mt-4
+                    .title-section.me-md-5.d-flex.flex-column.justify-content-center.h-100.text-md-start.text-center
+                        h2 Luxury transport
+                        p.text-start.mt-3 With City Rent, enjoy an unrivalled luxury transport experience. Our professional drivers combine discretion and expertise to ensure smooth, punctual travel. At the wheel of state-of-the-art vehicles, chosen for their exceptional comfort, every journey becomes a moment of relaxation and luxury. At City Rent, our priority is your satisfaction, for a memorable experience, every time.
+                        a.btn.btn-primary.custom-btn(href="fleet") Descover our fleet
+                
+            .d-md-flex.mt-5.pb-5
+                .col-md-7.image-section
+                    img(src="assets/vclasse.png", alt="Vue de l'hôtel", class="img-fluid")
+                .col-md-5.text-section.mt-md-0.mt-5
+                    .title-section.ms-md-5.d-flex.flex-column.justify-content-center.h-100.text-md-start.text-center
+                        h2 UN EMPLACEMENT IDÉAL
+                        p.text-start.mt-3 Discover the ultimate in refinement with our company, specialists in luxury hotel reservations in Europe's most prestigious cities. Whether you wish to admire the sparkling lights of Paris, immerse yourself in the history and charm of London, savor the elegance of Monaco, enjoy the glamour of Cannes, marvel at the snowy landscapes of Courchevel, or explore the art and culture of Brussels, we open the doors to the most exclusive establishments. Our promise to you? Unforgettable stays in exceptional locations, combining luxury and cultural heritage, all at reasonable prices. Make every trip an exceptional experience, with tailor-made services and attention to every detail, for an experience that goes beyond your expectations. With us, luxury becomes accessible, transforming every destination into a refined paradise within your reach.
+                        a.btn.btn-primary.custom-btn(href="#") Découvrez La Croisette
+            
+            .d-md-flex.mt-5.flex-row-reverse
+                .col-md-7.image-section
+                    img(src="assets/hotparis.png", alt="Vue de l'hôtel", class="img-fluid")
+                .col-md-5.text-section.mt-md-0.mt-5
+                    .title-section.me-md-5.d-flex.flex-column.justify-content-center.h-100.text-md-start.text-center
+                        h2 Your Exceptional Hotel Reservations 
+                        p.text-start.mt-3 Immerse yourself in elegance with our luxury hotel booking service in Paris, London, Monaco, Cannes, Courchevel and Brussels. Exclusive stays at reasonable prices await you, for memorable experiences in the most prestigious destinations. With us, luxury becomes accessible, promising exceptional moments and unrivalled refinement.
+                        a.btn.btn-primary.custom-btn(href="#") Découvrez La Croisette
+                
+
+
+  
+
+
+
+
+
+

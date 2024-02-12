@@ -1,0 +1,206 @@
+extends layout
+
+block content
+  head 
+  body
+  
+      section.d-flex.align-items-center.position-relative.vh-100.cover.hero(style='background-image:url(assets/acceuil.png); overflow: hidden')
+        .container-fluid.container-fluid-max
+          .row
+            .col-12.col-md-8.col-lg-6.col-xl-5(style='padding-top: 25%; margin-left:4%') 
+              h1.text-white.font-weight-bold.display-4 Discover the Luxury Services with City Rent
+              a.btn-custom-outline(href='#services' role='button') Check Our Services
+
+
+
+      section.d-flex.align-items-center.position-relative.mb-5.mt-5
+        .container 
+          .row.justify-content-center
+            .col-12.col-md-10.col-lg-8.text-center
+              img(src='assets/logris.png', alt='Company Logo', width='100', height='100')(style="margin-bottom:2%; ")
+              p(style="font-family:'Times New Roman', Times, serif;margin-bottom: 10%;").welcome WELCOME TO CITY RENT 
+              h1(style="font-family:Arial, Helvetica, sans-serif") Explore the essence of luxury travel with City Rent
+              hr(style='background-color: black; height: 1px; width : 4% ;border: none; margin:auto;padding:auto; margin-top:3%')
+              p.lead.mt-4.mb-5(style='font-size: 13px;')
+                | City Rent redefines the art of travel with our opulent car rental and chauffeur services. Based in the heart of Paris, we extend our exceptional offerings across Europe, ensuring every road leads to luxury. 
+                span#moreText.d-none
+                  | Our fleet, featuring only high-end vehicles, is matched by our exquisite concierge services within the finest palaces and hotels. We do more than transport; we transform your journey into a statement of prestige. 
+                a#seeMore(href='javascript:void(0);') See More
+
+      section.offers-and-packages.mb-5.mt-5
+        .container
+          .row
+            p.detailer OFFERS AND PACKAGES
+            each offer in offers
+              .col-md-4.mb-4
+                .card
+                  img.card-img-top(src=offer.image, alt=offer.title)
+                  .card-body
+                    h5.card-title #{offer.title}
+                    p.card-text #{offer.description}
+                    a.btn.btn-primary.custom-btn(href=offer.link) Learn More
+
+      section.d-flex.align-items-center.position-relative.mb-5.mt-5
+        .container#Destination
+          .row.justify-content-center
+            .col-12.col-md-10.col-lg-8.text-center
+
+              h1(style="font-family:Arial, Helvetica, sans-serif") Explore our destination 
+              hr(style='background-color: black; height: 1px; width : 4% ;border: none; margin:auto;padding:auto; margin-top:3%')
+              p.lead.mt-4.mb-5(style='font-size: 13px;')
+                | City Rent redefines the art of travel with our opulent car rental and chauffeur services. Based in the heart of Paris, we extend our exceptional offerings across Europe, ensuring every road leads to luxury. 
+              
+
+
+      section.bodis.mt-4.d-none.d-xl-flex
+        .options.carousel.slide(data-bs-ride='carousel')
+          .option.active(style="background:url('assets/parishot.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Paris
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/maybach.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Londres
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/londres.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Iteresuselle
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/coucour.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Bruxelles
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/bruxelle.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Bruxelles
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/bruxelle.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Bruxelles
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/bruxelle.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Iteresuselle
+                .sub Omuke trughte a otufta
+          .option(style="background:url('assets/bruxelle.png');background-size: cover; background-repeat: no-repeat;")
+            .shadow
+            .label
+              .info
+                .main Iteresuselle
+                .sub Omuke trughte a otufta
+
+      // Slider adapté pour les petits écrans
+      section.bodis.mb-5.d-block.d-xl-none.h-100
+        .carousel.slide(data-bs-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              img(src='assets/parishot.png' alt='Paris' class='d-block vw-100')
+              .carousel-caption.d-none.d-md-block
+                h5 Paris
+                p Omuke trughte a otufta
+            .carousel-item
+              img(src='assets/maybach.png' alt='Londres' class='d-block vw-100')
+              .carousel-caption.d-none.d-md-block
+                h5 Londres
+                p Omuke trughte a otufta
+            .carousel-item
+              img(src='assets/londres.png' alt='Iteresuselle' class='d-block vw-100')
+              .carousel-caption.d-none.d-md-block
+                h5 Iteresuselle
+                p Omuke trughte a otufta
+            .carousel-item
+              img(src='assets/coucour.png' alt='Bruxelles' class='d-block vw-100')
+              .carousel-caption.d-none.d-md-block
+                h5 Bruxelles
+                p Omuke trughte a otufta
+            .carousel-item
+              img(src='assets/bruxelle.png' alt='Bruxelles' class='d-block vw-100')
+              .carousel-caption.d-none.d-md-block
+                h5 Bruxelles
+                p Omuke trughte a otufta
+
+      
+          .carousel-control-prev(href='#carouselExampleControls' role='button' data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          .carousel-control-next(href='#carouselExampleControls' role='button' data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+
+
+              
+
+
+
+
+
+
+          
+
+      h1(style="font-family:Arial, Helvetica, sans-serif").partner.mb-5 Our Partners
+      section.brand-tier-section(style='border: 2px solid #e2e2e2; background-color: #fff;').mt-5.col-md-8.m-auto.col-11.mb-5
+        .container.col-12
+          // Header avec votre logo
+          .row.justify-content-center.py-3
+            .col-12.text-center
+              
+          // Ligne pour les marques de luxe
+          .row.py-1.align-items-center.justify-content-center.col-12
+            
+
+            .col-auto
+              a(href="https://www.fourseasons.com/paris/?utm_source=google&utm_medium=xnetwork&utm_campaign=saa-par-hre-low-brd_brandhotel_low_pmx_omni-na&utm_content=na-na&utm_term=na&gad_source=1&gclid=CjwKCAiAp5qsBhAPEiwAP0qeJlX_e_2Asuv7WOfCS_kYjI9gvbKUXTP3Jxp6XtPMOcMKqZ6Jr9sxKxoCXbAQAvD_BwE&gclsrc=aw.ds") 
+                img(src='assets/4.png', alt='4season', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/cril.png', alt='Crillon Logo', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/lebri.png', alt='bristol', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/Pen.png', alt='peninsula', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/plaza.png', alt='plaza athéné', class='my-2', style='max-height: 50px;')
+
+
+          .row.py-1.align-items-center.justify-content-center.col-12
+
+            .col-auto
+              a(href="https://www.fourseasons.com/paris/?utm_source=google&utm_medium=xnetwork&utm_campaign=saa-par-hre-low-brd_brandhotel_low_pmx_omni-na&utm_content=na-na&utm_term=na&gad_source=1&gclid=CjwKCAiAp5qsBhAPEiwAP0qeJlX_e_2Asuv7WOfCS_kYjI9gvbKUXTP3Jxp6XtPMOcMKqZ6Jr9sxKxoCXbAQAvD_BwE&gclsrc=aw.ds") 
+                img(src='assets/rm.png', alt='4season', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/sh.png', alt='Crillon Logo', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/bul.png', alt='bristol', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/barrier.png', alt='peninsula', class='my-2', style='max-height: 50px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/colec.png', alt='plaza athéné', class='my-2', style='max-height: 30px;')
+            .col-auto
+              a(href="") 
+                img(src='assets/ritz.png', alt='plaza athéné', class='my-2', style='max-height: 50px;')
+
+            .col-auto
+              a(href="") 
+                img(src='assets/marriot.png', alt='plaza athéné', class='my-2', style='max-height: 50px;')
+          // Ligne pour les marques sélectionnées
